@@ -1,0 +1,572 @@
+{
+  "Chana Dal": {
+    "price": 70,
+    "image": "images/chana_dal.jpeg",
+    "category": "Groceries",
+    "description": "Protein-rich lentil ideal for curries and deep frying recipes."
+  },
+  "Sunflower Oil": {
+    "price": 130,
+    "image": "images/sunflower_oil.jpeg",
+    "category": "Groceries",
+    "description": "Healthy cooking oil suitable for deep frying and daily cooking."
+  },
+  "Olive Oil": {
+    "price": 250,
+    "image": "images/olive_oil.jpeg",
+    "category": "Groceries",
+    "description": "Light olive oil used for saut\u00c3\u00a9ing, salads, and cooking."
+  },
+  "Salt": {
+    "price": 20,
+    "image": "images/salt.jpeg",
+    "category": "Groceries",
+    "description": "Iodized salt essential for seasoning all dishes."
+  },
+  "Sugar": {
+    "price": 45,
+    "image": "images/sugar.jpeg",
+    "category": "Groceries",
+    "description": "Fine sugar crystals ideal for tea, coffee, and desserts."
+  },
+  "Turmeric Powder": {
+    "price": 40,
+    "image": "images/turmeric.jpeg",
+    "category": "Groceries",
+    "description": "Natural haldi powder used for color and flavor in cooking."
+  },
+  "Mustard Seeds": {
+    "price": 40,
+    "image": "images/must.jpeg",
+    "category": "Groceries",
+    "description": "Aromatic seeds used for tempering and seasoning dishes."
+  },
+  "Garam Masala": {
+    "price": 40,
+    "image": "images/pow.jpeg",
+    "category": "Groceries",
+    "description": "Fragrant spice blend perfect for enhancing Indian curries."
+  },
+  "Puliyogare Powder": {
+    "price": 40,
+    "image": "images/puli.jpeg",
+    "category": "Groceries",
+    "description": "Authentic spice mix for preparing South Indian tamarind rice."
+  },
+  "Milk (1L)": {
+    "price": 55,
+    "image": "images/milk.jpeg",
+    "category": "Groceries",
+    "description": "Fresh creamy milk ideal for tea, coffee, and cooking."
+  },
+  "Curd (500g)": {
+    "price": 40,
+    "image": "images/curd.jpeg",
+    "category": "Groceries",
+    "description": "Thick and fresh curd perfect for meals and snacks."
+  },
+  "Butter": {
+    "price": 90,
+    "image": "images/butter.jpeg",
+    "category": "Groceries",
+    "description": "Creamy dairy butter suitable for cooking, baking and spreads."
+  },
+  "Ghee (500g)": {
+    "price": 220,
+    "image": "images/ghee.jpeg",
+    "category": "Groceries",
+    "description": "Pure aromatic desi ghee ideal for traditional dishes."
+  },
+  "Green Gram (250g)": {
+    "price": 40,
+    "image": "images/grains.jpeg",
+    "category": "Groceries",
+    "description": "Protein-rich lentil suitable for curries, salads and sprouts."
+  },
+  "Red Rice": {
+    "price": 150,
+    "image": "images/ric.jpeg",
+    "category": "Groceries",
+    "description": "Healthy fiber-rich red rice for nutritious meals."
+  },
+  "Jaggery Powder": {
+    "price": 76,
+    "image": "images/pow.jpg",
+    "category": "Groceries",
+    "description": "Natural sweetener made from pure sugarcane juice."
+  },
+  "Chia Seeds": {
+    "price": 90,
+    "image": "images/chia.jpeg",
+    "category": "Groceries",
+    "description": "Superfood seeds great for smoothies and puddings."
+  },
+  "Onions (1kg)": {
+    "price": 30,
+    "image": "images/onions.jpeg",
+    "category": "Vegetables",
+    "description": "Fresh onions ideal for curries, salads, and cooking."
+  },
+  "Tomatoes (1kg)": {
+    "price": 60,
+    "image": "images/tomatoes.jpeg",
+    "category": "Vegetables",
+    "description": "Ripe juicy tomatoes used for curries and salads."
+  },
+  "Potatoes (1kg)": {
+    "price": 40,
+    "image": "images/potatoes.jpeg",
+    "category": "Vegetables",
+    "description": "Fresh potatoes perfect for frying, boiling, and curries."
+  },
+  "Chilly (1kg)": {
+    "price": 40,
+    "image": "images/chillyy.jpeg",
+    "category": "Vegetables",
+    "description": "Fresh, spicy green chillies used to add heat and flavor to Indian dishes, curries, and chutneys."
+  },
+  "Carrot(1kg)": {
+    "price": 70,
+    "image": "images/carrot.jpeg",
+    "category": "Vegetables",
+    "description": "Crunchy green carrots perfect for salads and cooking."
+  },
+  "Beans(1kg)": {
+    "price": 40,
+    "image": "images/beans.jpeg",
+    "category": "Vegetables",
+    "description": "Crisp and fresh green beans perfect for curries & healthy meals."
+  },
+  "Beetroot(1kg)": {
+    "price": 50,
+    "image": "images/beet.jpeg",
+    "category": "Vegetables",
+    "description": "Fresh, earthy beetroots rich in nutrients, ideal for salads, juices, and healthy meals."
+  },
+  "Broccoli(1pic)": {
+    "price": 250,
+    "image": "images/broco.jpeg",
+    "category": "Vegetables",
+    "description": "Fresh, nutrient-rich broccoli perfect for stir-fries, salads, and healthy meals."
+  },
+  "Cauliflower(1pic)": {
+    "price": 90,
+    "image": "images/cauli.jpeg",
+    "category": "Vegetables",
+    "description": "Fresh, tender cauliflower ideal for curries, frying, and healthy cooking."
+  },
+  "Cabbage(1pic)": {
+    "price": 70,
+    "image": "images/cabba.jpeg",
+    "category": "Vegetables",
+    "description": "Fresh, crunchy cabbage great for salads, stir-fries, and daily cooking."
+  },
+  "Peas(1kg)": {
+    "price": 60,
+    "image": "images/peas.jpeg",
+    "category": "Vegetables",
+    "description": "Fresh, crunchy peas great for salads, stir-fries, and daily cooking."
+  },
+  "Brinjal(1kg)": {
+    "price": 50,
+    "image": "images/bri.jpeg",
+    "category": "Vegetables",
+    "description": "Fresh tender brinjal perfect for curries, frying, and stuffed recipes."
+  },
+  "Whitebrinjal(1kg)": {
+    "price": 50,
+    "image": "images/whitebri.jpeg",
+    "category": "Vegetables",
+    "description": "Fresh tender white brinjal perfect for curries, frying, and stuffed recipes."
+  },
+  "Drumstick(1kg)": {
+    "price": 70,
+    "image": "images/drum.jpeg",
+    "category": "Vegetables",
+    "description": "Fresh nutritious drumsticks ideal for sambar, curries, and health-rich meals."
+  },
+  "Ginger(1kg)": {
+    "price": 100,
+    "image": "images/ginger.jpeg",
+    "category": "Vegetables",
+    "description": "Fresh aromatic ginger used for flavoring teas, curries, and herbal remedies."
+  },
+  "Garlic(1kg)": {
+    "price": 100,
+    "image": "images/garlic.jpeg",
+    "category": "Vegetables",
+    "description": "Fresh aromatic garlice used for flavoring teas, curries, and herbal remedies."
+  },
+  "Cucumber(2pics)": {
+    "price": 30,
+    "image": "images/cucu.jpeg",
+    "category": "Vegetables",
+    "description": "Fresh, hydrating cucumbers perfect for salads, sandwiches, and cooling snacks."
+  },
+  "Corriander Leaves(1set)": {
+    "price": 20,
+    "image": "images/leaf.jpeg",
+    "category": "Vegetables",
+    "description": "Fresh aromatic coriander leaves perfect for garnishing and enhancing flavor."
+  },
+  "Capsicum(1kg)": {
+    "price": 60,
+    "image": "images/cap.jpeg",
+    "category": "Vegetables",
+    "description": "Fresh crunchy capsicum perfect for stir-fries, salads, and curries."
+  },
+  "Lady's Finger(1kg)": {
+    "price": 50,
+    "image": "images/lady.jpeg",
+    "category": "Vegetables",
+    "description": "Fresh tender lady\u00e2\u20ac\u2122s finger ideal for fries, curries, and healthy meals."
+  },
+  "Pumpkin(1pcs)": {
+    "price": 70,
+    "image": "images/pum.jpeg",
+    "category": "Vegetables",
+    "description": "Fresh sweet pumpkin perfect for curries, soups, and healthy dishes."
+  },
+  "Mango (1kg)": {
+    "price": 150,
+    "image": "images/fruit.webp",
+    "category": "Fruits",
+    "description": "Sweet and juicy mangoes perfect for desserts and juice."
+  },
+  "Apple (1kg)": {
+    "price": 140,
+    "image": "images/Apple.jpeg",
+    "category": "Fruits",
+    "description": "Fresh Kashmiri Apples."
+  },
+  "Pear (1kg)": {
+    "price": 160,
+    "image": "images/pear.jpeg",
+    "category": "Fruits",
+    "description": "Fresh, juicy pears rich in fiber and perfect for snacking or salads."
+  },
+  "Strawberry(1kg)": {
+    "price": 250,
+    "image": "images/str.jpeg",
+    "category": "Fruits",
+    "description": "Fresh, sweet strawberries bursting with flavor and perfect for desserts or snacking."
+  },
+  "Cherry (1kg)": {
+    "price": 200,
+    "image": "images/cher.jpeg",
+    "category": "Fruits",
+    "description": "Sweet, juicy cherries packed with antioxidants and perfect for snacking."
+  },
+  "Pappaya (1kg)": {
+    "price": 120,
+    "image": "images/pap.jpeg",
+    "category": "Fruits",
+    "description": "Fresh, sweet papaya rich in nutrients and perfect for digestion."
+  },
+  "Kiwi(3pcs)": {
+    "price": 100,
+    "image": "images/kiwi.jpeg",
+    "category": "Fruits",
+    "description": "Juicy, tangy kiwi rich in vitamin C and perfect for salads and smoothies."
+  },
+  "Chikoo(1kg)": {
+    "price": 100,
+    "image": "images/chik.jpeg",
+    "category": "Fruits",
+    "description": "Sweet, grainy chikoo packed with natural energy and perfect for healthy snacking."
+  },
+  "Watermelon(1kg)": {
+    "price": 100,
+    "image": "images/water.jpeg",
+    "category": "Fruits",
+    "description": "Juicy, refreshing watermelon perfect for hydration and summer snacking."
+  },
+  "Pineapple(1kg)": {
+    "price": 143,
+    "image": "images/pine.jpeg",
+    "category": "Fruits",
+    "description": "Sweet and tangy pineapple perfect for juices, desserts, and healthy snacking."
+  },
+  "Pomegrante(1kg)": {
+    "price": 200,
+    "image": "images/pom.jpeg",
+    "category": "Fruits",
+    "description": "Fresh, juicy pomegranate seeds packed with antioxidants and natural sweetness."
+  },
+  "Grapes(1kg)": {
+    "price": 170,
+    "image": "images/gra.jpeg",
+    "category": "Fruits",
+    "description": "Fresh, juicy grapes perfect for snacking and rich in antioxidants."
+  },
+  "Lychees (1kg)": {
+    "price": 180,
+    "image": "images/leech.jpeg",
+    "category": "Fruits",
+    "description": "Sweet, juicy lychees with a floral aroma, perfect for refreshing snacking."
+  },
+  "Muskmelon(1kg)": {
+    "price": 100,
+    "image": "images/musk.jpeg",
+    "category": "Fruits",
+    "description": "Sweet and refreshing muskmelon rich in water content, perfect for cooling summer snacks."
+  },
+  "Green Apple (1kg)": {
+    "price": 140,
+    "image": "images/gapp.jpeg",
+    "category": "Fruits",
+    "description": "Crisp and tangy green apples rich in fiber, perfect for snacking and salads."
+  },
+  "Rambutan(1kg)": {
+    "price": 170,
+    "image": "images/ram.jpeg",
+    "category": "Fruits",
+    "description": "Exotic sweet rambutan with juicy flesh and a refreshing tropical flavor."
+  },
+  "Yellow Dates(1kg)": {
+    "price": 200,
+    "image": "images/kar.jpeg",
+    "category": "Fruits",
+    "description": "Fresh yellow dates with a sweet, crunchy bite and rich natural energy."
+  },
+  "Dragon Fruit(1kg)": {
+    "price": 150,
+    "image": "images/drag.jpeg",
+    "category": "Fruits",
+    "description": "Vibrant, mildly sweet dragon fruit rich in antioxidants and perfect for healthy snacking."
+  },
+  "Raspberries(1kg)": {
+    "price": 200,
+    "image": "images/ras.jpeg",
+    "category": "Fruits",
+    "description": "Fresh, tangy-sweet raspberries packed with antioxidants and perfect for desserts."
+  },
+  "Custardapple(3pcs)": {
+    "price": 100,
+    "image": "images/cus.jpeg",
+    "category": "Fruits",
+    "description": "Sweet, creamy custard apples rich in flavor and perfect for healthy snacking."
+  },
+  "Dairy Milk": {
+    "price": 50,
+    "image": "images/DairyMilk.jpeg",
+    "category": "Snacks",
+    "description": "Smooth creamy milk chocolate loved by everyone."
+  },
+  "Kitkat": {
+    "price": 50,
+    "image": "images/kitkat.jpeg",
+    "category": "Snacks",
+    "description": "Crispy wafer biscuit coated in delicious chocolate."
+  },
+  "Amul Brownie": {
+    "price": 60,
+    "image": "images/amul.jpeg",
+    "category": "Snacks",
+    "description": "Soft chocolate brownie packed with rich flavor."
+  },
+  "Oreo": {
+    "price": 60,
+    "image": "images/oero.jpeg",
+    "category": "Snacks",
+    "description": "Crunchy chocolate cookies with cream filling."
+  },
+  "Bingo": {
+    "price": 10,
+    "image": "images/chips.jpeg",
+    "category": "Snacks",
+    "description": "Crispy potato chips full of bold flavors."
+  },
+  "Mad Angles": {
+    "price": 20,
+    "image": "images/mad.jpg",
+    "category": "Snacks",
+    "description": "Triangular crunchy chips with tangy spicy taste."
+  },
+  "Kurkure": {
+    "price": 20,
+    "image": "images/chip.jpg",
+    "category": "Snacks",
+    "description": "Crunchy masala snack perfect for evening snacking."
+  },
+  "5 Star": {
+    "price": 20,
+    "image": "images/5s.jpeg",
+    "category": "Snacks",
+    "description": "Chewy caramel-filled chocolate bar with a rich, creamy taste."
+  },
+  "Shots": {
+    "price": 5,
+    "image": "images/shot.jpeg",
+    "category": "Snacks",
+    "description": "Crispy chocolate-coated balls with a sweet, crunchy bite."
+  },
+  "ParleG": {
+    "price": 10,
+    "image": "images/parle.jpeg",
+    "category": "Snacks",
+    "description": "Classic glucose biscuits loved for their light, sweet taste and quick energy."
+  },
+  "Mariegold": {
+    "price": 10,
+    "image": "images/vita.jpeg",
+    "category": "Snacks",
+    "description": "Light and crispy Marie biscuits perfect for tea-time snacking."
+  },
+  "Alpenliebe": {
+    "price": 40,
+    "image": "images/alp.jpeg",
+    "category": "Snacks",
+    "description": "Smooth and creamy caramel candy with a rich, melt-in-the-mouth taste."
+  },
+  "Ferrero Rocher": {
+    "price": 200,
+    "image": "images/fer.jpeg",
+    "category": "Snacks",
+    "description": "Luxurious chocolate pralines with a crispy hazelnut center and smooth chocolate coating."
+  },
+  "Fuse": {
+    "price": 10,
+    "image": "images/fus.png",
+    "category": "Snacks",
+    "description": "A crunchy chocolate bar blended with caramel and nuts."
+  },
+  "Diet Coke": {
+    "price": 40,
+    "image": "images/coke.jpeg",
+    "category": "Snacks",
+    "description": "Refreshing zero sugar cola drink."
+  },
+  "Sprite": {
+    "price": 40,
+    "image": "images/spr.jpeg",
+    "category": "Snacks",
+    "description": "Lemon-lime soft drink with refreshing citrus taste."
+  },
+  "123 Maggie": {
+    "price": 15,
+    "image": "images/maggie.webp",
+    "category": "Snacks",
+    "description": "Tasty instant noodles ready in just a few minutes."
+  },
+  "Red Label (500g)": {
+    "price": 70,
+    "image": "images/tea.jpeg",
+    "category": "Groceries",
+    "description": "Strong and flavorful tea powder for daily use."
+  },
+  "Aloe Vera Gel": {
+    "price": 120,
+    "image": "images/alov.jpeg",
+    "category": "Skincare",
+    "description": "Natural soothing gel that hydrates and cools skin."
+  },
+  "Dove Roll-on": {
+    "price": 160,
+    "image": "images/roll.jpeg",
+    "category": "Skincare",
+    "description": "Long-lasting deodorant with a smooth fragrance."
+  },
+  "Clinic Plus Shampoo": {
+    "price": 180,
+    "image": "images/shampoo.webp",
+    "category": "Skincare",
+    "description": "Gentle shampoo that strengthens hair from the roots."
+  },
+  "MamaEarth Face wash": {
+    "price": 180,
+    "image": "images/face.jpeg",
+    "category": "Skincare",
+    "description": "Gentle natural facewash that cleanses, refreshes, and nourishes your skin."
+  },
+  "Dove Soap": {
+    "price": 80,
+    "image": "images/dove.jpeg",
+    "category": "Skincare",
+    "description": "Moisturizing beauty bar that leaves skin soft, smooth, and nourished."
+  },
+  "Fair and Lovely": {
+    "price": 20,
+    "image": "images/fair.jpeg",
+    "category": "Skincare",
+    "description": "Daily face cream for smooth and bright skin."
+  },
+  "Vaseline lipcare ": {
+    "price": 20,
+    "image": "images/vas.jpeg",
+    "category": "Skincare",
+    "description": "Nourishing lip balm that heals dryness and keeps lips soft and hydrated."
+  },
+  "Maybelline Eyeliner": {
+    "price": 149,
+    "image": "images/may.jpg",
+    "category": "Skincare",
+    "description": "Long-lasting smooth eyeliner that delivers precise, bold definition."
+  },
+  "Nivea Men": {
+    "price": 140,
+    "image": "images/menface.jpeg",
+    "category": "Skincare",
+    "description": "Light, hydrating face wash that keeps skin soft, smooth, and nourished all day."
+  },
+  "Joy Moisturizer": {
+    "price": 180,
+    "image": "images/joy.jpeg",
+    "category": "Skincare",
+    "description": "Light, hydrating moisturizer that keeps skin soft, smooth, and nourished all day."
+  },
+  "Himalaya lip balm": {
+    "price": 20,
+    "image": "images/hima.jpeg",
+    "category": "Skincare",
+    "description": "Nourishing herbal lip balm that heals dryness and keeps lips soft and smooth."
+  },
+  "Hair serum": {
+    "price": 20,
+    "image": "images/hair.jpeg",
+    "category": "Skincare",
+    "description": "Lightweight hair serum that adds shine, reduces frizz, and smoothens hair instantly."
+  },
+  "Peanut Butter": {
+    "price": 450,
+    "image": "images/peanut.jpeg",
+    "category": "Groceries",
+    "description": "Creamy protein-rich peanut spread."
+  },
+  "Kissan Jam": {
+    "price": 70,
+    "image": "images/jam.jpeg",
+    "category": "Groceries",
+    "description": "Sweet mixed fruit jam perfect for sandwiches."
+  },
+  "Polo": {
+    "price": 10,
+    "image": "images/polo.jpeg",
+    "category": "Snacks",
+    "description": "Mint candy with a refreshing cool taste."
+  },
+  "Dairy Day Candy": {
+    "price": 20,
+    "image": "images/dolly.jpeg",
+    "category": "Snacks",
+    "description": "Sweet and creamy milk-based candy."
+  },
+  "Tutti Frutti": {
+    "price": 20,
+    "image": "images/tutti.jpeg",
+    "category": "Snacks",
+    "description": "Colorful sweet fruit bits used in baking and toppings."
+  },
+  "Parachute": {
+    "price": 100,
+    "category": "Groceries",
+    "image": "images/oil.jpeg",
+    "description": "Pure coconut oil commonly used for cooking and hair care."
+  },
+  "Toor Dal": {
+    "price": 80,
+    "category": "Groceries",
+    "image": "images/toor_dal.jpeg",
+    "description": "Popular dal used for sambar, rasam, and daily curries."
+  }
+}

@@ -1,0 +1,10 @@
+<h2>Edit Product</h2>
+
+<form method="POST">
+    <input name="name" value="{{ name }}" required>
+    <input name="price" value="{{ item.price }}" required>
+    <input name="category" value="{{ item.category }}" required>
+    <input name="image" value="{{ item.image }}" required>
+    <textarea name="description">{{ item.description }}</textarea>
+    <button type="submit">Save</button>
+</form>

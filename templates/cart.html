@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Your Cart</title>
+    <style>
+        body { 
+            font-family: Arial; 
+            background: #eef1ff; 
+            padding: 20px; 
+        }
+
+        h2 { text-align: center; }
+
+        .item-box {
+            background: white;
+            padding: 15px;
+            margin: 12px;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+
+        img {
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .qty-controls {
+            margin-top: 10px;
+        }
+
+        .qty-controls button {
+            width: 30px;
+            height: 30px;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 6px;
+            cursor: pointer;
+            border: none;
+            margin: 0 5px;
+        }
+
+        .remove-btn {
+            background: #d90429;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 8px;
+            cursor: pointer;
+            border: none;
+            margin-top: 10px;
+        }
+
+        .pay-btn {
+            background: #0077b6;
+            color: white;
+            padding: 12px 20px;
+            border-radius: 10px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            display: block;
+            margin: 20px auto;
+        }
+    </style>
+</head>
+
+<body>
+
+<h2>Your Cart 🛒</h2>
+
+<div id="cart-items"></div>
+
+<form action="/billing" method="POST">
+    <input type="hidden" name="items" id="items-field">
+    <input type="hidden" name="total" id="total-field">
+    <button type="submit" class="pay-btn" onclick="submitCart()">Proceed to Payment</button>
+</form>
+
+
+<!-- ⭐ FINAL CART JAVASCRIPT -->
+<script>
+// 1️⃣ Load backend items safely
+let backendData = {{ items_data | tojson }};
+
+
+// 2️⃣ Load cart from localStorage
+let cart = JSON.parse(localStorage.getItem("cart")) || {};
+
+let container = document.getElementById("cart-items");
+let total = 0;
+
+
+// ⭐ Render cart properly
+function renderCart() {
+    container.innerHTML = "";
+    total = 0;
+
+    if (Object.keys(cart).length === 0) {
+        container.innerHTML = "<p>Your cart is empty.</p>";
+        return;
+    }
+
+    for (let name in cart) {
+
+        // Full item info
+        let item = backendData[name];
+
+        // If product exists in items_data
+        if (item) {
+            let qty = cart[name];
+            let price = item.price;
+            let subtotal = qty * price;
+            total += subtotal;
+
+            container.innerHTML += `
+            <div class="item-box">
+                <img src="/static/${item.image}">
+                <h3>${name}</h3>
+
+                <div class="qty-controls">
+                    <button onclick="decreaseQty('${name}')">-</button>
+                    <span><b>${qty}</b></span>
+                    <button onclick="increaseQty('${name}')">+</button>
+                </div>
+
+                <p>Subtotal: ₹${subtotal}</p>
+
+                <button class="remove-btn" onclick="removeItem('${name}')">Remove</button>
+            </div>`;
+        } 
+    }
+
+    document.getElementById("total-field").value = total;
+}
+
+renderCart();
+
+
+// ⭐ Increase Qty
+function increaseQty(name) {
+    cart[name]++;
+    localStorage.setItem("cart", JSON.stringify(cart));
+    renderCart();
+}
+
+
+// ⭐ Decrease Qty
+function decreaseQty(name) {
+    if (cart[name] > 1) {
+        cart[name]--;
+    } else {
+        delete cart[name];
+    }
+    localStorage.setItem("cart", JSON.stringify(cart));
+    renderCart();
+}
+
+
+// ⭐ Remove Item
+function removeItem(name) {
+    delete cart[name];
+    localStorage.setItem("cart", JSON.stringify(cart));
+    renderCart();
+}
+
+
+// ⭐ Send Cart Data to Billing Page
+function submitCart() {
+    let cartArray = [];
+
+    for (let name in cart) {
+        let item = backendData[name];
+        let subtotal = cart[name] * item.price;
+
+        cartArray.push({
+            name: name,
+            qty: cart[name],
+            total: subtotal
+        });
+    }
+
+    document.getElementById("items-field").value =
+        JSON.stringify(cartArray);
+
+    document.getElementById("total-field").value = total;
+}
+</script>
+
+</body>
+</html>

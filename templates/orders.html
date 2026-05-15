@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Order History</title>
+</head>
+<body>
+
+<h2>Your Orders</h2>
+
+{% if orders %}
+    {% for items, total, method, date in orders %}
+        <div style="background:#fff;padding:15px;margin:10px;border-radius:10px;">
+            <p><b>Items:</b> {{ items }}</p>
+            <p><b>Total:</b> ₹{{ total }}</p>
+            <p><b>Payment:</b> {{ method }}</p>
+            <p><b>Date:</b> {{ date }}</p>
+        </div>
+    {% endfor %}
+{% else %}
+    <h3>No past orders found.</h3>
+{% endif %}
+
+</body>
+</html>

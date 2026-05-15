@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Order Receipt</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f7f7f7;
+            padding: 30px;
+        }
+        .receipt-container {
+            width: 430px;
+            margin: auto;
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 0 10px grey;
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+        th, td {
+            padding: 8px;
+            border-bottom: 1px solid #ccc;
+            text-align: left;
+        }
+        .total {
+            font-size: 18px;
+            font-weight: bold;
+            text-align: right;
+            padding-top: 15px;
+        }
+        .payment {
+            margin-top: 10px;
+            font-size: 16px;
+        }
+        .print-btn {
+            width: 100%;
+            padding: 12px;
+            background: black;
+            color: white;
+            margin-top: 25px;
+            cursor: pointer;
+            border-radius: 6px;
+            border: none;
+            font-size: 16px;
+        }
+        .print-btn:hover {
+            background: #333;
+        }
+    </style>
+</head>
+<body>
+
+<div class="receipt-container">
+    <h2>🧾 Order Receipt</h2>
+
+    <table>
+        <tr>
+            <th>Item</th>
+            <th>Qty</th>
+            <th>Price</th>
+        </tr>
+
+        <!-- ⭐ Correct Loop Showing Items -->
+        {% for item in order['cart'] %}
+        <tr>
+            <td>{{ item['name'] }}</td>
+            <td>{{ item['qty'] }}</td>
+            <td>₹{{ item['total'] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <p class="total">Total Amount: ₹{{ order['total'] }}</p>
+
+    <p class="payment"><b>Payment Method:</b> {{ order['payment'] }}</p>
+
+    <button class="print-btn" onclick="window.print()">Print Receipt</button>
+</div>
+
+</body>
+</html>

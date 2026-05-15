@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Grocery Store</title>
+    <style>
+        body { 
+            font-family: Arial; 
+            background: #fff8ef; 
+            padding: 20px; 
+        }
+
+        h2 { text-align: center; color: #333; }
+
+        .top-buttons {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            background: #0077b6;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            margin: 10px;
+            display: inline-block;
+        }
+
+        .category-bar {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .cat-btn {
+            background: #eee;
+            padding: 10px 20px;
+            margin: 5px;
+            border-radius: 20px;
+            cursor: pointer;
+            border: none;
+            text-decoration: none;
+            color: black;
+        }
+
+        .cat-btn:hover { background: orange; color: white; }
+
+        .product-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .product-card {
+            width: 250px;
+            background: white;
+            border-radius: 12px;
+            padding: 15px;
+            margin: 15px;
+            text-align: center;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+
+        img {
+            width: 180px;
+            height: 150px;
+            border-radius: 10px;
+            object-fit: cover;
+        }
+
+        .qty-box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 10px 0;
+        }
+
+        .qty-btn {
+            background: orange;
+            color: white;
+            padding: 8px 12px;
+            border-radius: 5px;
+            cursor: pointer;
+            border: none;
+            margin: 0 5px;
+        }
+
+        .add-btn {
+            background: orange;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+<h2>Welcome, {{ session['user'] }} 👋</h2>
+
+<!-- 🔍 SEARCH BAR -->
+<div style="text-align:center; margin:20px;">
+    <input type="text" id="searchBox" placeholder="Search items..."
+           style="width: 300px; padding: 10px; border-radius: 10px; border: 1px solid #aaa;"
+           onkeyup="searchItems()">
+</div>
+
+<div class="top-buttons">
+    <a class="btn" href="/cart">View Cart</a>
+    <a class="btn" href="/logout">Logout</a>
+</div>
+
+<h2>🛍️ Order Your Groceries</h2>
+
+<!-- CATEGORY BUTTONS -->
+<div class="category-bar">
+    <a href="/" class="cat-btn">All</a>
+    <a href="/category/Fruits" class="cat-btn">Fruits</a>
+    <a href="/category/Vegetables" class="cat-btn">Vegetables</a>
+    <a href="/category/Snacks" class="cat-btn">Snacks</a>
+    <a href="/category/Groceries" class="cat-btn">Groceries</a>
+    <a href="/category/Skincare" class="cat-btn">Skincare</a>
+</div>
+
+<!-- PRODUCT GRID -->
+<div class="product-grid" id="productGrid">
+    {% for name, item in items.items() %}
+    <div class="product-card">
+
+        <img src="{{ url_for('static', filename=item.image) }}">
+
+        <h3>{{ name }}</h3>
+
+        <!-- ⭐ ADDED DESCRIPTION TEXT HERE -->
+        <p style="font-size:14px; color:#555; margin-top:-5px;">
+            {{ item.description }}
+        </p>
+
+        <p><b>₹{{ item.price }}</b></p>
+
+        <!-- QUANTITY BUTTONS -->
+        <div class="qty-box">
+            <button class="qty-btn" onclick="changeQty('{{ name }}', -1)">-</button>
+            <span id="qty-{{ name }}">0</span>
+            <button class="qty-btn" onclick="changeQty('{{ name }}', 1)">+</button>
+        </div>
+
+        <!-- ADD TO CART BUTTON -->
+        <button class="add-btn" onclick="addToCart('{{ name }}', {{ item.price }})">
+            ADD TO CART
+        </button>
+
+    </div>
+    {% endfor %}
+</div>
+
+
+<!-- ⭐ FULL FINAL JAVASCRIPT -->
+<script>
+/************************************
+ ⭐ GLOBAL CART (used everywhere)
+************************************/
+let cart = JSON.parse(localStorage.getItem("cart")) || {};
+
+
+/************************************
+ ⭐ SAVE CART SAFELY
+************************************/
+function saveCart() {
+    localStorage.setItem("cart", JSON.stringify(cart));
+}
+
+
+/************************************
+ ⭐ CHANGE QUANTITY (HOME PAGE)
+************************************/
+function changeQty(name, val) {
+    let q = document.getElementById("qty-" + name);
+    let num = parseInt(q.innerHTML) + val;
+    if (num < 0) num = 0;
+    q.innerHTML = num;
+}
+
+
+/************************************
+ ⭐ ADD TO CART (HOME PAGE)
+************************************/
+function addToCart(name, price) {
+    let qty = parseInt(document.getElementById("qty-" + name).innerHTML);
+
+    if (qty <= 0) {
+        alert("Please select quantity!");
+        return;
+    }
+
+    if (cart[name]) {
+        cart[name] += qty;
+    } else {
+        cart[name] = qty;
+    }
+
+    saveCart();
+    alert(name + " added to cart!");
+}
+
+
+/************************************
+ ⭐ LIVE SEARCH FILTER
+************************************/
+function searchItems() {
+    let input = document.getElementById("searchBox").value.toLowerCase();
+    let cards = document.querySelectorAll(".product-card");
+
+    cards.forEach(card => {
+        let name = card.querySelector("h3").innerText.toLowerCase();
+        if (name.includes(input)) {
+            card.style.display = "block";
+        } else {
+            card.style.display = "none";
+        }
+    });
+}
+</script>
+
+</body>
+</html>
